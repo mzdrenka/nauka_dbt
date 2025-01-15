@@ -1,0 +1,36 @@
+
+version: 2
+
+models:
+  - name: example__my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: example__my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+  
+  - name: example__team_locations
+    description: >
+        A list of a few NBA teams that made the Playoffs in 2020.
+    columns:
+      - name: Team
+        description: "The name of the team."
+      
+      - name: City
+        description: "The home city of the team."
+        tests:
+          - is_la_team
+
+      - name: State
+        description: "The home state of the team."

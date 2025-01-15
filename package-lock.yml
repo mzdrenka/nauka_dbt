@@ -1,0 +1,6 @@
+packages:
+  - package: dbt-labs/dbt_utils
+    version: 1.2.0
+  - package: dbt-labs/logging
+    version: 0.8.0
+sha1_hash: cc54e83c834db7741e596f86a7cefe45cff4009f
